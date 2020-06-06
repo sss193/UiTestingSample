@@ -3,7 +3,6 @@ package com.example.tryui
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
-import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -27,7 +26,7 @@ class MainActivityTest {
             .check(matches(isDisplayed())) // method 1
 
         onView(withId(R.id.activity_main_title))
-            .check(matches(withEffectiveVisibility(Visibility.VISIBLE))) // method 2
+            .check(matches(withEffectiveVisibility(Visibility.GONE))) // method 2
 
         onView(withId(R.id.button_next_activity))
             .check(matches(isDisplayed()))
